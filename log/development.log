@@ -2328,3 +2328,177 @@ Processing by CocktailsController#show as HTML
 Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 172.25.0.1 at 2024-12-09 22:49:04 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CocktailsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (1.4ms)[0m  [1m[34mSELECT `cocktails`.* FROM `cocktails`[0m
+  ↳ app/views/cocktails/index.html.erb:3
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 3.6ms | GC: 0.2ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cocktails/index.html.erb within layouts/application (Duration: 13.3ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 79.0ms | GC: 22.9ms)
+Completed 200 OK in 103ms (Views: 77.2ms | ActiveRecord: 4.2ms (1 query, 0 cached) | GC: 30.2ms)
+
+
+Started GET "/" for 172.25.0.1 at 2024-12-09 22:54:41 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CocktailsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT `cocktails`.* FROM `cocktails`[0m
+  ↳ app/views/cocktails/index.html.erb:3
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cocktails/index.html.erb within layouts/application (Duration: 9.1ms | GC: 0.2ms)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 3.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `login_path' for #<ActionView::Base:0x0000000000e010>):
+
+Causes:
+NameError (undefined local variable or method `login_path' for #<ActionView::Base:0x0000000000e010>)
+    14:             <%= link_to 'Cocktails', cocktails_path, class: "nav-link" %>
+    15:           </li>
+    16:           <li class="nav-item">
+    17:             <%= link_to 'Login', login_path, class: "nav-link" %>
+    18:           </li>
+    19:         </ul>
+    20:       </div>
+  
+app/views/layouts/_header.html.erb:17
+app/views/layouts/application.html.erb:13
+Started GET "/" for 172.25.0.1 at 2024-12-09 22:57:40 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CocktailsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.5ms)[0m  [1m[34mSELECT `cocktails`.* FROM `cocktails`[0m
+  ↳ app/views/cocktails/index.html.erb:3
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/index.html.erb within layouts/application (Duration: 10.7ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | GC: 2.0ms)
+Completed 200 OK in 20ms (Views: 13.8ms | ActiveRecord: 3.5ms (1 query, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/" for 172.25.0.1 at 2024-12-09 22:57:46 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CocktailsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.7ms)[0m  [1m[34mSELECT `cocktails`.* FROM `cocktails`[0m
+  ↳ app/views/cocktails/index.html.erb:3
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/index.html.erb within layouts/application (Duration: 5.4ms | GC: 0.5ms)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 0.5ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/" for 172.25.0.1 at 2024-12-09 22:57:48 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CocktailsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (0.9ms)[0m  [1m[34mSELECT `cocktails`.* FROM `cocktails`[0m
+  ↳ app/views/cocktails/index.html.erb:3
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.6ms | GC: 0.4ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/index.html.erb within layouts/application (Duration: 6.9ms | GC: 0.4ms)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | GC: 0.4ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/cocktails" for 172.25.0.1 at 2024-12-09 22:57:49 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CocktailsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (1.1ms)[0m  [1m[34mSELECT `cocktails`.* FROM `cocktails`[0m
+  ↳ app/views/cocktails/index.html.erb:3
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/index.html.erb within layouts/application (Duration: 6.9ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | GC: 0.3ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/" for 172.25.0.1 at 2024-12-09 22:57:50 +0000
+Cannot render console from 172.25.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CocktailsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (1.2ms)[0m  [1m[34mSELECT `cocktails`.* FROM `cocktails`[0m
+  ↳ app/views/cocktails/index.html.erb:3
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.4ms | GC: 0.3ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/_cocktail-card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cocktails/index.html.erb within layouts/application (Duration: 7.5ms | GC: 0.3ms)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | GC: 0.5ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.7ms)
+
+
