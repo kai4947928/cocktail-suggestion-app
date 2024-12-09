@@ -9,10 +9,10 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 WORKDIR /app
 
 # 必要なファイルをコピー
-COPY ./src /app
+COPY . /app
 
 # Gemfile と Gemfile.lock をコピー
-COPY ./src/Gemfile ./src/Gemfile.lock ./
+COPY Gemfile Gemfile.lock ./
 
 # Bundlerを使って依存関係をインストール
 RUN bundle install
