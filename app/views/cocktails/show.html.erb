@@ -1,0 +1,5 @@
+<h1><%= @cocktail.name %></h1>
+<p>アルコール度数: <%= @cocktail.alcohol_strength %>%</p>
+<p>ベース: <%= @cocktail.base_alcohol&.name || "不明" %></p>
+<p>作り方: <%= @cocktail.procedure %></p>
+<%= link_to "TOPに戻る", root_path, class: "btn btn-primary" %>
