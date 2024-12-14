@@ -18,6 +18,13 @@ gem "stimulus-rails"
 gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
+#OAuth認証で使う
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
+gem 'tailwindcss-rails'
+gem 'devise'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'pundit'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"

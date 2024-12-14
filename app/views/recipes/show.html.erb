@@ -1,0 +1,21 @@
+<h1><%= @recipe.name %></h1>
+
+<div class="card">
+  <% if @recipe.image_url.present? %>
+    <img src="<%= @recipe.image_url %>" class="card-img-top" alt="<%= @recipe.name %>">
+  <% else %>
+    <img src="default-image.jpg" class="card-img-top" alt="default">
+  <% end %>
+
+  <div class="card-body">
+    <h5 class="card-title">カクテル詳細</h5>
+    <p><strong>難易度:</strong> <%= @recipe.difficulty.name %></p>
+    <p><strong>ベース:</strong> <%= @recipe.base_liquor.name %></p>
+    <p><strong>副材料:</strong>
+      <% @recipe.ingredients.each do |ingredient| %>
+        <%= ingredient.name %><%= ", " unless ingredient == @recipe.ingredients.last %>
+      <% end %>
+    <p><strong>手順:</strong> <%= @recipe.procedure %></p>
+  </div>
+</div>
+<%= link_to '戻る', recipes_path, class: "btn btn-secondary" %>

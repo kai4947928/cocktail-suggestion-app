@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cocktail Suggestion App</title>
+  <title>CocktailSuggestionApp</title>
   <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-
+  <
 </head>
 
 <body>
-  <header>
+  <!-- Header (Include the header partial) -->
   <%= render 'layouts/header' %>
-  </header>
-  <main>
-    <%= yield %>
-  </main>
-  <footer>
+
+  <!-- Main Content -->
+  <%= yield %> <!-- This is where the content of the page will go -->
+
+  <!-- Footer (Include the footer partial) -->
   <%= render 'layouts/footer' %>
-  </footer>
 </body>
 </html>

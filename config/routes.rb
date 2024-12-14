@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
-  root "cocktails#index"
-  resources :cocktails, only: [:index, :show]
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
+  root "recipes#index"
+  resources :recipes, only: [:index, :show]
+
+  get '/auth/failure', to: redirect('/')
+  delete '/logout', to: 'sessions#destroy'
 end
