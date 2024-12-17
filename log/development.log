@@ -6887,3 +6887,355 @@ Processing by RecipesController#index as HTML
 Completed 200 OK in 17ms (Views: 12.4ms | ActiveRecord: 2.5ms (7 queries, 0 cached) | GC: 0.0ms)
 
 
+[dotenv] Loaded [33m.env[0m
+  [1m[36mRecipe Load (1.7ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes` WHERE `recipes`.`name` LIKE '%example%' /* loading for pp */ LIMIT 11[0m
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes` WHERE (name LIKE '%example%') /* loading for pp */ LIMIT 11[0m
+  [1m[36mRecipe Load (1.4ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes` WHERE `recipes`.`difficulty_id` = 1 /* loading for pp */ LIMIT 11[0m
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes` WHERE `recipes`.`name` LIKE '%example%' /* loading for pp */ LIMIT 11[0m
+[dotenv] Loaded [33m.env[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('5844198059249541180', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' ORDER BY `ar_internal_metadata`.`key` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('5844198059249541180')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/" for 172.25.0.1 at 2024-12-17 15:05:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (6.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mBaseLiquor Load (4.3ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.6ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 32.4ms | GC: 0.7ms)
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/views/recipes/index.html.erb:4
+  [1m[36mDifficulty Load (2.4ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties` WHERE `difficulties`.`id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:4
+  [1m[36mBaseLiquor Load (0.2ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors` WHERE `base_liquors`.`id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:4
+  [1m[36mRecipeIngredient Load (0.5ms)[0m  [1m[34mSELECT `recipe_ingredients`.* FROM `recipe_ingredients` WHERE `recipe_ingredients`.`recipe_id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:4
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT `ingredients`.* FROM `ingredients` WHERE `ingredients`.`id` IN (1, 2, 3, 4)[0m
+  ↳ app/views/recipes/index.html.erb:4
+  Rendered recipes/index.html.erb within layouts/application (Duration: 117.0ms | GC: 40.5ms)
+  [1m[36mCACHE BaseLiquor Load (0.0ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mCACHE Difficulty Load (0.0ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | GC: 0.1ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 130.3ms | GC: 40.8ms)
+Completed 200 OK in 217ms (Views: 108.4ms | ActiveRecord: 28.7ms (9 queries, 2 cached) | GC: 49.8ms)
+
+
+Started GET "/" for 172.25.0.1 at 2024-12-17 15:06:47 +0000
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (2.2ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mDifficulty Load (0.2ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties` WHERE `difficulties`.`id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mBaseLiquor Load (0.2ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors` WHERE `base_liquors`.`id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT `recipe_ingredients`.* FROM `recipe_ingredients` WHERE `recipe_ingredients`.`recipe_id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT `ingredients`.* FROM `ingredients` WHERE `ingredients`.`id` IN (1, 2, 3, 4)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 34.4ms | GC: 0.0ms)
+  [1m[36mBaseLiquor Load (0.2ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.2ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 4.4ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 31.2ms | ActiveRecord: 12.9ms (7 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/recipes?q%5Bbase_liquor_id_eq%5D=&q%5Bdifficulty_id_eq%5D=&commit=%E6%A4%9C%E7%B4%A2" for 172.25.0.1 at 2024-12-17 15:06:56 +0000
+Processing by RecipesController#index as HTML
+  Parameters: {"q"=>{"base_liquor_id_eq"=>"", "difficulty_id_eq"=>""}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mDifficulty Load (0.4ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties` WHERE `difficulties`.`id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mBaseLiquor Load (0.2ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors` WHERE `base_liquors`.`id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT `recipe_ingredients`.* FROM `recipe_ingredients` WHERE `recipe_ingredients`.`recipe_id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT `ingredients`.* FROM `ingredients` WHERE `ingredients`.`id` IN (1, 2, 3, 4)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 10.2ms | GC: 0.0ms)
+  [1m[36mBaseLiquor Load (0.2ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.2ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | GC: 0.0ms)
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 2.3ms (7 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/recipes?q%5Bbase_liquor_id_eq%5D=1&q%5Bdifficulty_id_eq%5D=&commit=%E6%A4%9C%E7%B4%A2" for 172.25.0.1 at 2024-12-17 15:07:02 +0000
+Processing by RecipesController#index as HTML
+  Parameters: {"q"=>{"base_liquor_id_eq"=>"1", "difficulty_id_eq"=>""}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes` WHERE `recipes`.`base_liquor_id` = 1[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mDifficulty Load (2.5ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties` WHERE `difficulties`.`id` = 1[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mBaseLiquor Load (0.3ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors` WHERE `base_liquors`.`id` = 1[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mRecipeIngredient Load (0.5ms)[0m  [1m[34mSELECT `recipe_ingredients`.* FROM `recipe_ingredients` WHERE `recipe_ingredients`.`recipe_id` = 1[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT `ingredients`.* FROM `ingredients` WHERE `ingredients`.`id` IN (1, 2, 3, 4)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 31.3ms | GC: 12.7ms)
+  [1m[36mBaseLiquor Load (0.2ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.1ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 2.6ms | GC: 0.5ms)
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | GC: 0.5ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | GC: 13.2ms)
+Completed 200 OK in 39ms (Views: 30.5ms | ActiveRecord: 5.4ms (7 queries, 0 cached) | GC: 13.2ms)
+
+
+Started GET "/recipes?q%5Bbase_liquor_id_eq%5D=1&q%5Bdifficulty_id_eq%5D=2&commit=%E6%A4%9C%E7%B4%A2" for 172.25.0.1 at 2024-12-17 15:07:05 +0000
+Processing by RecipesController#index as HTML
+  Parameters: {"q"=>{"base_liquor_id_eq"=>"1", "difficulty_id_eq"=>"2"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes` WHERE (`recipes`.`base_liquor_id` = 1 AND `recipes`.`difficulty_id` = 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  [1m[36mBaseLiquor Load (0.5ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.3ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 4.2ms | GC: 0.4ms)
+  Rendered layouts/_header.html.erb (Duration: 5.0ms | GC: 0.4ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | GC: 0.4ms)
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 1.7ms (3 queries, 0 cached) | GC: 1.6ms)
+
+
+Started GET "/recipes?q%5Bbase_liquor_id_eq%5D=1&q%5Bdifficulty_id_eq%5D=2&commit=%E6%A4%9C%E7%B4%A2" for 172.25.0.1 at 2024-12-17 15:07:08 +0000
+Processing by RecipesController#index as HTML
+  Parameters: {"q"=>{"base_liquor_id_eq"=>"1", "difficulty_id_eq"=>"2"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes` WHERE (`recipes`.`base_liquor_id` = 1 AND `recipes`.`difficulty_id` = 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  [1m[36mBaseLiquor Load (0.4ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.2ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 1.0ms (3 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/recipes?q%5Bbase_liquor_id_eq%5D=2&q%5Bdifficulty_id_eq%5D=1&commit=%E6%A4%9C%E7%B4%A2" for 172.25.0.1 at 2024-12-17 15:07:10 +0000
+Processing by RecipesController#index as HTML
+  Parameters: {"q"=>{"base_liquor_id_eq"=>"2", "difficulty_id_eq"=>"1"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes` WHERE (`recipes`.`base_liquor_id` = 2 AND `recipes`.`difficulty_id` = 1)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  [1m[36mBaseLiquor Load (0.4ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.3ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | GC: 0.3ms)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 1.5ms (3 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/recipes?q%5Bbase_liquor_id_eq%5D=1&q%5Bdifficulty_id_eq%5D=2&commit=%E6%A4%9C%E7%B4%A2" for 172.25.0.1 at 2024-12-17 15:07:13 +0000
+Processing by RecipesController#index as HTML
+  Parameters: {"q"=>{"base_liquor_id_eq"=>"1", "difficulty_id_eq"=>"2"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes` WHERE (`recipes`.`base_liquor_id` = 1 AND `recipes`.`difficulty_id` = 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  [1m[36mBaseLiquor Load (0.4ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.2ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 3.7ms | GC: 0.2ms)
+  Rendered layouts/_header.html.erb (Duration: 4.5ms | GC: 0.2ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.2ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 1.5ms (3 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/recipes?q%5Bbase_liquor_id_eq%5D=2&q%5Bdifficulty_id_eq%5D=1&commit=%E6%A4%9C%E7%B4%A2" for 172.25.0.1 at 2024-12-17 15:07:16 +0000
+Processing by RecipesController#index as HTML
+  Parameters: {"q"=>{"base_liquor_id_eq"=>"2", "difficulty_id_eq"=>"1"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes` WHERE (`recipes`.`base_liquor_id` = 2 AND `recipes`.`difficulty_id` = 1)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 3.2ms | GC: 0.3ms)
+  [1m[36mBaseLiquor Load (0.4ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.3ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layouts/_header.html.erb (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | GC: 0.3ms)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 1.6ms (3 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/recipes" for 172.25.0.1 at 2024-12-17 15:07:18 +0000
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mDifficulty Load (0.3ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties` WHERE `difficulties`.`id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mBaseLiquor Load (0.4ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors` WHERE `base_liquors`.`id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mRecipeIngredient Load (0.4ms)[0m  [1m[34mSELECT `recipe_ingredients`.* FROM `recipe_ingredients` WHERE `recipe_ingredients`.`recipe_id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT `ingredients`.* FROM `ingredients` WHERE `ingredients`.`id` IN (1, 2, 3, 4)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 10.4ms | GC: 0.0ms)
+  [1m[36mBaseLiquor Load (0.2ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.1ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 2.9ms | GC: 0.1ms)
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | GC: 0.1ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | GC: 0.1ms)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 2.8ms (7 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/recipes?q%5Bbase_liquor_id_eq%5D=2&q%5Bdifficulty_id_eq%5D=2&commit=%E6%A4%9C%E7%B4%A2" for 172.25.0.1 at 2024-12-17 15:07:34 +0000
+Processing by RecipesController#index as HTML
+  Parameters: {"q"=>{"base_liquor_id_eq"=>"2", "difficulty_id_eq"=>"2"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes` WHERE (`recipes`.`base_liquor_id` = 2 AND `recipes`.`difficulty_id` = 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mDifficulty Load (0.4ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties` WHERE `difficulties`.`id` = 2[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mBaseLiquor Load (0.3ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors` WHERE `base_liquors`.`id` = 2[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mRecipeIngredient Load (0.3ms)[0m  [1m[34mSELECT `recipe_ingredients`.* FROM `recipe_ingredients` WHERE `recipe_ingredients`.`recipe_id` = 2[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT `ingredients`.* FROM `ingredients` WHERE `ingredients`.`id` = 2[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 9.5ms | GC: 0.1ms)
+  [1m[36mBaseLiquor Load (0.2ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.2ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 2.9ms | GC: 0.3ms)
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | GC: 0.3ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | GC: 0.4ms)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 2.5ms (7 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/recipes" for 172.25.0.1 at 2024-12-17 15:07:37 +0000
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mDifficulty Load (0.3ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties` WHERE `difficulties`.`id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mBaseLiquor Load (0.2ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors` WHERE `base_liquors`.`id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mRecipeIngredient Load (0.1ms)[0m  [1m[34mSELECT `recipe_ingredients`.* FROM `recipe_ingredients` WHERE `recipe_ingredients`.`recipe_id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT `ingredients`.* FROM `ingredients` WHERE `ingredients`.`id` IN (1, 2, 3, 4)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 5.3ms | GC: 0.4ms)
+  [1m[36mBaseLiquor Load (0.2ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.1ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 2.4ms | GC: 0.8ms)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | GC: 0.8ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 1.2ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 2.1ms (7 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/recipes?q%5Bbase_liquor_id_eq%5D=1&q%5Bdifficulty_id_eq%5D=1&commit=%E6%A4%9C%E7%B4%A2" for 172.25.0.1 at 2024-12-17 15:07:45 +0000
+Processing by RecipesController#index as HTML
+  Parameters: {"q"=>{"base_liquor_id_eq"=>"1", "difficulty_id_eq"=>"1"}, "commit"=>"検索"}
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes` WHERE (`recipes`.`base_liquor_id` = 1 AND `recipes`.`difficulty_id` = 1)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mDifficulty Load (0.4ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties` WHERE `difficulties`.`id` = 1[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mBaseLiquor Load (0.2ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors` WHERE `base_liquors`.`id` = 1[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mRecipeIngredient Load (0.3ms)[0m  [1m[34mSELECT `recipe_ingredients`.* FROM `recipe_ingredients` WHERE `recipe_ingredients`.`recipe_id` = 1[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT `ingredients`.* FROM `ingredients` WHERE `ingredients`.`id` IN (1, 2, 3, 4)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 10.2ms | GC: 0.5ms)
+  [1m[36mBaseLiquor Load (0.3ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.2ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 3.1ms | GC: 0.3ms)
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | GC: 0.3ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | GC: 0.8ms)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 2.5ms (7 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/" for 172.25.0.1 at 2024-12-17 15:07:47 +0000
+Processing by RecipesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mDifficulty Load (0.4ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties` WHERE `difficulties`.`id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mBaseLiquor Load (0.4ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors` WHERE `base_liquors`.`id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mRecipeIngredient Load (0.2ms)[0m  [1m[34mSELECT `recipe_ingredients`.* FROM `recipe_ingredients` WHERE `recipe_ingredients`.`recipe_id` IN (1, 2)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT `ingredients`.* FROM `ingredients` WHERE `ingredients`.`id` IN (1, 2, 3, 4)[0m
+  ↳ app/views/recipes/index.html.erb:3
+  Rendered recipes/index.html.erb within layouts/application (Duration: 9.4ms | GC: 0.2ms)
+  [1m[36mBaseLiquor Load (0.2ms)[0m  [1m[34mSELECT `base_liquors`.* FROM `base_liquors`[0m
+  ↳ app/views/shared/_search.html.erb:4
+  [1m[36mDifficulty Load (0.2ms)[0m  [1m[34mSELECT `difficulties`.* FROM `difficulties`[0m
+  ↳ app/views/shared/_search.html.erb:8
+  Rendered shared/_search.html.erb (Duration: 2.7ms | GC: 0.1ms)
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | GC: 0.1ms)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | GC: 0.3ms)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 2.2ms (7 queries, 0 cached) | GC: 0.3ms)
+
+

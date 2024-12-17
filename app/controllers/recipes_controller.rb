@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
 
   def index
-    @q = Recipe.ransack(params[:q])
+    @q = Recipe.ransack(params[:q] || {})  # 空のparams[:q]に対応
     @recipes = @q.result.includes(:difficulty, :base_liquor, :ingredients).all
   end
 
