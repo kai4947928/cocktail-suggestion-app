@@ -26,6 +26,9 @@ gem 'devise'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'pundit'
 
+# 複数検索機能
+gem 'ransack'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

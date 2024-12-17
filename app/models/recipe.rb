@@ -6,6 +6,10 @@ class Recipe < ApplicationRecord
   has_many :recipe_ingredients
   has_many :ingredients, through: :recipe_ingredients
 
+  def self.ransackable_attributes(auth_object = nil)
+    ["name", "difficulty_id", "base_liquor_id", "created_at", "updated_at"]
+  end
+
   # 親レシピとの関連（自己参照）
   belongs_to :parent_recipe, class_name: 'Recipe', optional: true
 
