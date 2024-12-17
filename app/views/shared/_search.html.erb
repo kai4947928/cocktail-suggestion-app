@@ -1,4 +1,4 @@
-<%= search_form_for @q, url: recipes_path, method: :get, class: "search-form" do |f| %>
+<%= search_form_for q, url: recipes_path, method: :get, class: "search-form" do |f| %>
   <div>
     <%= f.label :base_liquor_id_eq, "ベースのお酒" %>
     <%= f.select :base_liquor_id_eq, options_from_collection_for_select(BaseLiquor.all, :id, :name), { prompt: "選択してください" }, class: "form-select" %>

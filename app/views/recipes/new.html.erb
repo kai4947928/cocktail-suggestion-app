@@ -1,4 +1,27 @@
-<div>
-  <h1 class="font-bold text-4xl">Recipes#new</h1>
-  <p>Find me in app/views/recipes/new.html.erb</p>
-</div>
+<h1>新規カクテル投稿</h1>
+
+<%= form_with(model: @recipe, local: true) do |form| %>
+  <div class="form-group">
+    <%= form.label :name, "カクテル名" %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :difficulty_id, "難易度" %>
+    <%= form.collection_select :difficulty_id, Difficulty.all, :id, :name, prompt: "選択してください", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :base_liquor_id, "ベースのお酒" %>
+    <%= form.collection_select :base_liquor_id, BaseLiquor.all, :id, :name, prompt: "選択してください", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :procedure, "手順" %>
+    <%= form.text_area :procedure, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit "カクテルを投稿", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,4 +1,5 @@
 <h1>公式カクテル一覧</h1>
+<%= render 'shared/search', q: @q %>
 
 <% @recipes.each do |recipe| %>  <!-- ここで @recipes をループします -->
   <div class="col-md-4">
