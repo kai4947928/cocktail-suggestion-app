@@ -1,4 +1,69 @@
-<div>
-  <h1 class="font-bold text-4xl">Recipes#new</h1>
-  <p>Find me in app/views/recipes/new.html.erb</p>
-</div>
+<h1>カクテルを投稿しよう</h1>
+
+<%= form_with model: @recipe, local: true do |f| %>
+  <div>
+    <%= f.label :name, "カクテル名" %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.label :image, "画像アップロード" %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.label :procedure, "手順" %>
+    <%= f.text_area :procedure, rows: 5, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.label :difficulty_id, "難易度" %>
+    <%= f.collection_select :difficulty_id, Difficulty.all, :id, :name, { prompt: "選択してください" }, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.label :base_liqour_id, "ベースのお酒" %>
+    <%= f.collection_select :base_liquor_id, BaseLiquor.all, :id, :name, { prompt: "選択して下さい" }, class: "font-control" %>
+  </div>
+
+  <div>
+    <%= f.label :alcohol_strength, "アルコール度数 (%)" %>
+    <%= f.select :alcohol_strength, Recipe.alcohol_strengths.keys.map { |key| [t("recipes.alcohol_strengths.#{key}"), key] }, { prompt: "選択して下さい" }, class: "font-select" %>
+  </div>
+
+  <div>
+    <%= f.label :flavor, "味わい" %>
+    <%= f.text_area :flavor, rows: 3, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.label :parent_recipe_id, "カクテル種別" %>
+    <%= f.radio_button :is_original, true, id: "original_radio" %>
+    <%= f.label :is_original, "オリジナル", for: "original_radio" %>
+    <%= f.radio_button :is_original, false, id: "arrange_radio" %>
+    <%= f.label :is_original, "アレンジ", for: "arrange_radio" %>
+  </div>
+
+  <div id="parent_recipe_selection" style="display: none;">
+    <%= f.label :parent_recipe_id, "親カクテル" %>
+    <%= f.select :parent_recipe_id, Recipe.where(official: true).pluck(:name, :id), { include_blank: "選択してください" }, class: "form-select" %>
+  </div>
+
+  <div>
+    <h3>材料・分量</h3>
+    <%= f.fields_for :recipe_ingredients do |ingredient_form| %>
+      <div class="nested-fields">
+        <%= ingredient_form.label :ingredient_id, "材料" %>
+        <%= ingredient_form.collection_select :ingredient_id, Ingredient.all, :id, :name, { prompt: "選択してください" }, class: "form-control" %>
+        <%= ingredient_form.label :amount, "分量" %>
+        <%= ingredient_form.text_field :amount, class: "form-control" %>
+        <%= link_to "削除", "#", class: "remove_fields btn btn-danger" %>
+      </div>
+    <% end %>
+    <%= link_to "材料を追加", "#", class: "add_fields btn btn-primary", data: { association: "recipe_ingredients" } %>
+  </div>
+
+  <div>
+    <%= f.submit "投稿する", class: "btn btn-success" %>
+  </div>
+<% end %>

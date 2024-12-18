@@ -3,22 +3,33 @@ class RecipesController < ApplicationController
 
   def index
     @q = Recipe.ransack(params[:q] || {})  # 空のparams[:q]に対応
-    @recipes = @q.result.includes(:difficulty, :base_liquor, :ingredients).all
+    @recipes = @q.result.includes(:difficulty, :base_liquor, :ingredients)
   end
 
   def show
+    @recipe = Recipe.find(params[:id])
+    @q = Recipe.ransack(params[:q] || {})
   end
 
   def new
     @recipe = Recipe.new
+    @q = Recipe.ransack(params[:q] || {})
   end
 
   def create
     @recipe = Recipe.new(recipe_params)
+    @q = Recipe.ransack(params[:q] || {})
+
+    if params[:recipe][:is_original] == "true"
+      @recipe.parent_recipe_id = nil
+    else
+      @recipe.parent_recipe_id = params[:recipe][:parent_recipe_id]
+    end
+
     if @recipe.save
       redirect_to @recipe, notice: "レシピが作成されました"
     else
-      render :new
+      render :new, alert: "失敗しました"
     end
   end
 
@@ -44,6 +55,6 @@ class RecipesController < ApplicationController
     end
 
     def recipe_params
-      params.require(:recipe).permit(:name, :alcohol_strength, :imag_url, :procedure, :official, :parent_recipe_id, :difficulty_id, :base_liquor_id, :user_id)
+      params.require(:recipe).permit(:name, :alcohol_strength, :imag_url, :procedure, :official, :parent_recipe_id, :difficulty_id, :base_liquor_id, :user_id, :is_original)
     end
 end

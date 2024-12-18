@@ -17,5 +17,14 @@
       <% end %>
     <p><strong>手順:</strong> <%= @recipe.procedure %></p>
   </div>
+
+  <% if @recipe.child_recipes.any? %>
+    <h2>アレンジカクテル</h2>
+    <ul>
+      <% @recipe.child_recipes.each do |child| %>
+        <li><%= link_to child.name, recipe_path(child) %></li>
+      <% end %>
+    </ul>
+  <% end %>
 </div>
 <%= link_to '戻る', recipes_path, class: "btn btn-secondary" %>
